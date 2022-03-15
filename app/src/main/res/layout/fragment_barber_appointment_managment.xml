@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/blur"
+    android:orientation="vertical"
+    tools:context=".BarberAppointmentManagment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="127dp"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:layout_weight="0"
+        android:foregroundGravity="center_vertical|center|center_horizontal"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewBarberApp"
+            android:layout_width="177dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_weight="0"
+            android:background="@drawable/gradient_bg_middle"
+            android:foregroundGravity="center_vertical|center|center_horizontal"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="Your appointments:"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:layout_weight="0"
+        android:foregroundGravity="center_vertical|center|center_horizontal"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/barberAppManagmentListview"
+            android:layout_width="111dp"
+            android:layout_height="267dp"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_weight="0"
+            android:background="@drawable/gradient_bg_middle"
+            android:foregroundGravity="center_vertical|center|center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:layout_weight="0"
+        android:gravity="center|center_horizontal|center_vertical">
+
+        <Button
+            android:id="@+id/pickDateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:background="@drawable/gradient_bg_middle"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:onClick="showDatePickerDialog"
+            android:padding="5sp"
+            android:text="Days off"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/buttonChangeWorkHoure"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_bg_middle"
+            android:padding="5sp"
+            android:text="Change work hours"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/pickStartTimeButton"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/gradient_bg"
+            android:ems="10"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:inputType="time"
+            android:text="Starting hour"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="47dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_weight="0"
+            android:background="@drawable/gradient_bg_reverse"
+            android:foregroundGravity="center_vertical|center|center_horizontal"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="To:"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/pickEndTimeButton"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:background="@drawable/gradient_bg"
+            android:ems="10"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:inputType="time"
+            android:text="Ending hour"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/daypicker_layout"
+        android:layout_width="323dp"
+        android:layout_height="77dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:layout_weight="0"
+        android:background="@drawable/gradient_bg_middle"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonChangeWorkDays"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_bg_middle"
+            android:padding="5sp"
+            android:text="Change work days"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <include
+            android:id="@+id/daypicker"
+            layout="@layout/daypicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:foregroundGravity="center_vertical|center|center_horizontal"
+            android:gravity="center|center_horizontal|center_vertical"></include>
+    </LinearLayout>
+
+</LinearLayout>

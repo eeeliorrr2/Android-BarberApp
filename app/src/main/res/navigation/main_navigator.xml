@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigator"
+    app:startDestination="@id/fragment_Main">
+
+    <fragment
+        android:id="@+id/fragment_Main"
+        android:name="com.example.barberapp.Fragment_Main"
+        android:label="fragment__main"
+        tools:layout="@layout/fragment__main" >
+        <action
+            android:id="@+id/action_fragment_Main_to_fragment_Signin"
+            app:destination="@id/fragment_Signin" />
+        <action
+            android:id="@+id/action_fragment_Main_to_fragment_Register"
+            app:destination="@id/fragment_Register" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Signin"
+        android:name="com.example.barberapp.Fragment_Signin"
+        android:label="fragment__signin"
+        tools:layout="@layout/fragment__signin" >
+        <action
+            android:id="@+id/action_fragment_Signin_to_fragment_User_Actions"
+            app:destination="@id/fragment_User_Actions" />
+        <action
+            android:id="@+id/action_fragment_Signin_to_fragment_Main"
+            app:destination="@id/fragment_Main" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Register"
+        android:name="com.example.barberapp.Fragment_Register"
+        android:label="fragment__register"
+        tools:layout="@layout/fragment__register" >
+        <action
+            android:id="@+id/action_fragment_Register_to_fragment_Signin"
+            app:destination="@id/fragment_Signin" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_User_Actions"
+        android:name="com.example.barberapp.Fragment_User_Actions"
+        android:label="fragment__user__actions"
+        tools:layout="@layout/fragment__user__actions" >
+        <action
+            android:id="@+id/action_fragment_User_Actions_to_appointmentFragment2"
+            app:destination="@id/appointmentFragment" />
+        <action
+            android:id="@+id/action_fragment_User_Actions_to_fragment_appointment__management"
+            app:destination="@id/fragment_appointment__management" />
+        <action
+            android:id="@+id/action_fragment_User_Actions_to_barberAppointmentManagment"
+            app:destination="@id/barberAppointmentManagment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentFragment"
+        android:name="com.example.barberapp.AppointmentFragment"
+        android:label="fragment_appointment"
+        tools:layout="@layout/fragment_appointment" />
+    <fragment
+        android:id="@+id/fragment_appointment__management"
+        android:name="com.example.barberapp.fragment_appointment__management"
+        android:label="fragment_appointment__management"
+        tools:layout="@layout/fragment_appointment__management" >
+        <action
+            android:id="@+id/action_fragment_appointment__management_to_fragment_User_Actions"
+            app:destination="@id/fragment_User_Actions" />
+    </fragment>
+    <fragment
+        android:id="@+id/barberAppointmentManagment"
+        android:name="com.example.barberapp.BarberAppointmentManagment"
+        android:label="fragment_barber_appointment_managment"
+        tools:layout="@layout/fragment_barber_appointment_managment" >
+        <action
+            android:id="@+id/action_barberAppointmentManagment_to_fragment_User_Actions"
+            app:destination="@id/fragment_User_Actions" />
+    </fragment>
+</navigation>
